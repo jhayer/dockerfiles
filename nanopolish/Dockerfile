@@ -12,10 +12,8 @@ RUN pip install numpy && \
 # install nanopolish
 RUN git clone --recursive https://github.com/jts/nanopolish.git && \
     cd nanopolish/ && \
-    make all
-
-# make the scripts executable
-RUN cd scripts && \
+    make all \
+    cd scripts && \
     chmod +x *
 
 ENV PATH /nanopolish:/nanopolish/scripts:$PATH
