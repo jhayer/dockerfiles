@@ -12,7 +12,7 @@ RUN pip install numpy && \
 # install nanopolish
 RUN git clone --recursive https://github.com/jts/nanopolish.git && \
     cd nanopolish/ && \
-    make all \
+    make all && \
     cd scripts && \
     chmod +x *
 
