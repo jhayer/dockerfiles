@@ -9,6 +9,9 @@ RUN wget https://bootstrap.pypa.io/get-pip.py && \
 RUN pip install numpy && \
     pip install biopython
 
+# install libs for samtools
+RUN apt-get install libbz2-dev liblzma-dev
+
 # install nanopolish
 RUN git clone --recursive https://github.com/jts/nanopolish.git && \
     cd nanopolish/ && \
